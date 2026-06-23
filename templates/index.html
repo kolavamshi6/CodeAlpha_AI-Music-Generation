@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Music Generator</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>AI Music Generator</h1>
+
+    <h3>Choose Instrument:</h3>
+
+    <div class="instrument-grid">
+
+        <label>
+            <input type="radio" name="instrument" value="piano.mp3">
+            Piano
+        </label>
+
+        <label>
+            <input type="radio" name="instrument" value="violin.mp3">
+            Violin
+        </label>
+
+        <label>
+            <input type="radio" name="instrument" value="guitar.mp3">
+            Guitar
+        </label>
+
+        <label>
+            <input type="radio" name="instrument" value="flute.mp3">
+            Flute
+        </label>
+
+        <label>
+            <input type="radio" name="instrument" value="trumpet.mp3">
+            Trumpet
+        </label>
+
+        <label>
+            <input type="radio" name="instrument" value="clarinet.mp3">
+            Clarinet
+        </label>
+
+        <label>
+            <input type="radio" name="instrument" value="oboe.mp3">
+            Oboe
+        </label>
+
+        <label>
+            <input type="radio" name="instrument" value="bassoon.mp3">
+            Bassoon
+        </label>
+
+    </div>
+
+    <br>
+
+    <button id="generateBtn">
+        Generate Music
+    </button>
+
+    <div class="progress-container">
+        <div id="progressBar"></div>
+    </div>
+
+    <p id="status">
+        Ready
+    </p>
+
+    <audio
+        id="player"
+        controls
+        style="width:100%;margin-top:20px;">
+    </audio>
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
